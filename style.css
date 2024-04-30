@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard Variable', sans-serif;
+}
+
+header {
+    width: 100vw;
+    height: 90px;
+}
+
+header> .logo {
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+aside {
+    position: fixed;
+    width: 200px;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #F5F5F5;    
+    border: 1px solid #333333;
+    transform: translateX(-200px);
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+aside.open {
+    transform: translateX(0);
+}
+
+aside a {
+    text-decoration: none;
+    color: #333333;
+    margin-bottom: 24px;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.wrap{
+    display: grid;
+    width: 100vw;
+    height: calc(100vh - 90px);
+    grid-template-columns: 200px 1.5fr 1fr;
+
+    border: 1px solid #333333;
+    color: #333333;
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+.wrap.open{
+    margin-left: 200px;
+    width: calc(100vw - 200px);
+}
+
+nav{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    border-right: 1px solid #333333;
+    background-color: #FAFAFA;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+}
+
+div.products{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+    border-right: 1px solid #333333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.products div.product_wrap{
+    width: 50vw;
+    max-width: 800px;
+    height: 50vw;
+    max-height: 800px;
+
+    position: relative;
+}
+
+div.products img{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+
+    transition: all 0.2s ease;
+}
+
+div.info{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+div.info h4 {
+    font-weight: 400;
+}
+
+div.info > *{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+div.buttons {
+    height: 28px;
+    display: flex;
+    gap: 12px;
+}
+
+div.button {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #333333;
+    border-radius: 50%;
+}
+
+.button:nth-child(1){
+    background-color: #EEEADC;
+}
+
+.button:nth-child(2){
+    background-color: #D2962A;
+}
+
+.button:nth-child(3){
+    background-color: #243624;
+}
